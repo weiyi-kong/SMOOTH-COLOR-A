@@ -12,7 +12,7 @@
 		float r;
 
 		void setup(){
-		  size(600,600);
+		  size(screenWidth,screenHeight);
 		  background(255);
 		  smooth();
 		}
@@ -31,23 +31,21 @@
 		 
 		  for(int x=0;x<=200;x++){
 		   
-		    int wave=int(sin((frameCount)*0.05+x)*600);
-		    int w=int(sin((frameCount)*0.055+x)*600);
+		    int wave=int(sin((frameCount)*0.05+x)*screenWidth);
+		    int w=int(sin((frameCount)*0.055+x)*screenWidth);
 		 
-		    //line(width+wave,0,width+w,height/2);
-		    //line(width+wave,height/2,width+w,height);
 		    noFill();
-		    curve(0, height/2+height/6, width+wave, 0, width+w, height/2, 0, -height/6);
+		    curve(0, height/2+height/6, screenWidth+wave, 0, screenWidth+w, height/2, 0, -height/6);
 		   
 		  }
 		  for(int x=0;x<=200;x++){
 		   
-		    int wavy=int(sin((frameCount)*0.01+x)*600);
-		    int wy=int(sin((frameCount)*0.015+x)*600);
+		    int wavy=int(sin((frameCount)*0.01+x)*screenWidth);
+		    int wy=int(sin((frameCount)*0.015+x)*screenWidth);
 		 
 		   
 		    noFill();
-		    curve(0, height+height/6, width+wy, height/2, width+wavy, height, 0, height/2-height/6);
+		    curve(0, height+height/6, screenWidth+wy, height/2, screenWidth+wavy, height, 0, height/2-height/6);
 		   
 		  }
 		}
